@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+  background-color: rgba(49, 217, 240, 0.534);
+}
+#logo {
+  display: inline-block;
+  margin-left: 30px;
+}
+.menu {
+  width: 70vw;
+  float: right;
+  margin-top: 47px;
+  text-decoration: none;
+
+  font-size: 26px;
+}
+.menu a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  font-family: "Kalam", cursive;
+}
+.menu a:hover {
+  text-transform: uppercase;
+}
+.mensagem {
+  font-family: "Kalam", cursive;
+  text-align: center;
+  font-size: 26px;
+}
+#bold {
+  font-weight: bold;
+}
+.redes img {
+  width: 40px;
+}
+footer {
+  /*
+  background-color: rgba(49, 217, 240, 0.534);*/
+}
+
+.site-map {
+  float: right;
+  width: 30vw;
+}
+.site-map ul li {
+  list-style-type: none;
+  text-decoration: none;
+  text-align: center;
+}
+.site-map ul {
+  margin-top: 30px;
+}
+.site-map a {
+  text-decoration: none;
+  color: black;
+  font-family: "Kalam", cursive;
+  font-size: 20px;
+}
+.site-map a:hover {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.endereço {
+  float: right;
+  width: 30vw;
+  margin: 30px;
+
+  text-align: center;
+  font-family: "Kalam", cursive;
+  font-size: 18px;
+  font-weight: bold;
+}
+address {
+  margin-top: 30px;
+}
+.funcionarios {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.funcionarios h2 {
+  text-align: left;
+}
+.funcionarios ul li {
+  list-style: none;
+  line-height: 1.6;
+}
+
+table {
+  border: solid 2px rgb(245, 173, 245);
+  width: 80vw;
+  margin: 30px auto;
+  padding: 20px;
+}
+.tabela img {
+  width: 20%;
+}
+table th {
+  text-align: left;
+}
+.tabela td {
+  width: 40%;
+  text-align: left;
+}
+h2 {
+  text-align: center;
+}
+form {
+  border: rgb(245, 173, 245) solid 2px;
+  width: 40vw;
+  margin: 30px auto;
+  line-height: 1.6;
+  font-size: 20px;
+  padding: 40px;
+}
+form button {
+  margin: 20px auto;
+}
