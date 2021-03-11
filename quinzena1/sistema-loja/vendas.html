@@ -27,30 +27,47 @@
         </div>
       </nav>
     </header>
-
-    <div class="mensagem">
-      <h1>Bem-vind@ a <em>Papelaria da Jessy</em>!</h1>
-      <p>Preços imbativeis!! Venha conferir nossos produtos</p>
-
-      <h3>Nosso papel é colorir a sua vida</h3>
-      <p id="bold">
-        Somos uma empresa que tem um objetivo claro: trazer a você praticidade e
-        qualidade em materiais de escritório, por um preço acessível \o/
-      </p>
-    </div>
-    <br />
-
-    <div class="redes1">
-      <p>Siga-nos nas redes sociais!</p>
-
-      <div class="redes">
-        <img src="https://image.flaticon.com/icons/png/512/25/25305.png" />
-        <img src="https://image.flaticon.com/icons/png/512/25/25425.png" />
-        <img src="https://image.flaticon.com/icons/png/512/8/8800.png" />
+    <h2>Entrada de produtos:</h2>
+    <form action="" id="entrada">
+      <div>
+        <label for="link-foto">Link para foto: </label>
+        <input type="url" id="link-foto" name="link-foto" />
       </div>
+
+      <div>
+        <label for="descricao">Descrição do produto: </label>
+
+        <input type="text" id="descricao" name="descrição" />
+      </div>
+
+      <div>
+        <label for="preco">Preço (em R$): </label>
+
+        <input type="number" id="preco" name="preço" />
+      </div>
+      <div>
+        <label for="pagamento">Escolha forma de pagamento: </label>
+        <select id="pagamento" name="pagamento" size="1">
+          <option value="selecione" selected>Selecione</option>
+          <option value="cartao">Cartão</option>
+          <option value="dinheiro">Dinheiro</option>
+        </select>
+      </div>
+    </form>
+
+    <div class="itens-carrinho">
+      <h3>Itens vendidos:</h3>
+      <ul>
+        <li>Conjunto de canetas jet-lux - R$ 4,00</li>
+        <li>Estojo estampado - R$ 9,00</li>
+        <li>Lápis Faber-Castell - R$ 2,00</li>
+        <li>Marca Texto - R$ 5,00</li>
+        <li>Mouse pad Gatos - R$ 18,00</li>
+      </ul>
     </div>
 
     <hr />
+
     <footer>
       <img src="img/logojessy.png" />
       <div class="site-map">
