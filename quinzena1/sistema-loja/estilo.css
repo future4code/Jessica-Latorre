@@ -1,22 +1,21 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Kalam", cursive;
 }
+/*Propriedades dos elemento do topo: menu e logo*/
 nav {
   background-color: rgba(49, 217, 240, 0.534);
 }
-#logo {
-  display: inline-block;
-  margin-left: 30px;
-}
+
 .menu {
-  width: 70vw;
+  width: 80vw;
   float: right;
   margin-top: 47px;
+  margin-right: 40px;
   text-decoration: none;
-
-  font-size: 26px;
+  font-weight: bold;
+  font-size: 20px;
 }
 .menu a {
   text-decoration: none;
@@ -26,24 +25,32 @@ nav {
   font-family: "Kalam", cursive;
 }
 .menu a:hover {
-  text-transform: uppercase;
+  background-color: rgba(245, 173, 245, 0.8);
 }
+/*Propriedades da mensagem e redes sociais da pagina inicial*/
 .mensagem {
   font-family: "Kalam", cursive;
+  padding: 16px;
   text-align: center;
   font-size: 26px;
+  width: 70%;
+  margin: 50px auto;
+  background-color: rgba(245, 173, 245, 0.8);
 }
 #bold {
   font-weight: bold;
 }
+.redes1 {
+  font-size: 20px;
+  font-weight: bold;
+  display: inline;
+  text-align: center;
+}
+
 .redes img {
   width: 40px;
 }
-footer {
-  /*
-  background-color: rgba(49, 217, 240, 0.534);*/
-}
-
+/*Propriedades do rodapé*/
 .site-map {
   float: right;
   width: 30vw;
@@ -77,26 +84,34 @@ footer {
   font-size: 18px;
   font-weight: bold;
 }
+
 address {
   margin-top: 30px;
 }
+
+/*Pagina de funcionários*/
 .funcionarios {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  border: rgb(245, 173, 245) solid 3px;
+  width: 60%;
+  margin: 70px auto;
+  padding: 30px;
 }
 .funcionarios h2 {
   text-align: left;
 }
 .funcionarios ul li {
+  font-weight: bold;
   list-style: none;
   line-height: 1.6;
+  font-size: 20px;
 }
-
+/* propriedades de tabelas*/
 table {
-  border: solid 2px rgb(245, 173, 245);
+  border: solid 3px rgb(245, 173, 245);
   width: 80vw;
   margin: 30px auto;
   padding: 20px;
+  font-size: 20px;
 }
 .tabela img {
   width: 20%;
@@ -111,14 +126,66 @@ table th {
 h2 {
   text-align: center;
 }
+/*propriedades dos forms e seus buttons*/
 form {
-  border: rgb(245, 173, 245) solid 2px;
+  border: rgb(245, 173, 245) solid 3px;
   width: 40vw;
   margin: 30px auto;
   line-height: 1.6;
   font-size: 20px;
+  font-weight: bold;
   padding: 40px;
 }
-form button {
-  margin: 20px auto;
+
+button {
+  font-family: "Kalam", cursive;
+  font-size: 20px;
+  padding: 14px;
+  margin-top: 20px;
+}
+button:hover {
+  background-color: rgb(245, 173, 245);
+}
+/*esconde as setas do input number*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/*historico de vendas*/
+.history {
+  border: rgb(245, 173, 245) solid 3px;
+  font-weight: bold;
+  width: 60%;
+  margin: 100px auto;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: left;
+}
+.history li {
+  list-style: none;
+}
+.filtro {
+  width: 50%;
+  margin: 30px auto;
+  font-weight: bold;
+  text-align: center;
+}
+#btn {
+  margin-top: 10px;
+  padding: 5px;
+}
+/*vendas*/
+.itens-carrinho {
+  border: rgb(245, 173, 245) solid 3px;
+  width: 60%;
+  padding: 15px;
+  margin: 50px auto;
+}
+.itens-carrinho li {
+  list-style: none;
 }
