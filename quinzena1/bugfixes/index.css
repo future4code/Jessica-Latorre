@@ -17,6 +17,9 @@ h2 {
 }
 
 input {
+    
+   border-style: none;
+   border-bottom: black solid 2px;
     height: 20px;
     width: 500px;
 }
@@ -124,6 +127,7 @@ td button:hover{
 .container-do-search {
     margin-top: 20px;
     height: 100px;
+    
 }
 
 
