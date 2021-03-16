@@ -73,6 +73,13 @@ div img {
 .icone {
     height: 15px;
 }
+.icone:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.icone:active{
+    opacity: 1;
+}
 
 
 /** 
