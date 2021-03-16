@@ -30,7 +30,7 @@ img {
 }
 
 div>p:first-child {
-    display: inline;
+    display: block;
 }
 
 div img {
@@ -38,6 +38,7 @@ div img {
 }
 
 .botao-amarelo {
+   
     background-color: #ffaf43;
     width: 250px;
     height: 40px;
@@ -51,6 +52,7 @@ div img {
 }
 
 .container {
+    
     height: 500px;
     text-align: center;
 }
@@ -80,6 +82,7 @@ div img {
 }
 
 #container-para-comprar>p {
+    
     color: #c44f00;
     padding: 100px 0;
     font-size: 60px;
