@@ -81,11 +81,20 @@ div img {
     padding-top:100px;
     
     
+    
+    
 }
 
 #container-de-descricao>ol {
+    
     padding: 15px 0px;
+    display: inline-block;
+    
+   
+    
 }
+
+
 
 #container-para-comprar {
     background-color: #e7eb90;
