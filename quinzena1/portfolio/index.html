@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" type="text/css" href="estilo.css" />-->
+    <link rel="stylesheet" href="estilo.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <title>Jessica Latorre</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="img/meulogo.png" />
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="#">Projetos</a>
+            <ul>
+              <li><a href="site1.html">Site - FKBERS</a></li>
+              <li><a href="site2.html">Site - Academia</a></li>
+            </ul>
+          </li>
+
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+        <div class="redes-sociais">
+          <a href="https://github.com/jessicalatorrecabral" target="_blank"
+            ><img src="img/github.png" alt="GitHub" width="40px"
+          /></a>
+          <a
+            href="https://www.instagram.com/jessica.latorre182/"
+            target="_blank"
+            ><img src="img/insta.png" alt="Instagram" width="40px"
+          /></a>
+
+          <a
+            href="https://www.linkedin.com/in/jessicalatorre182"
+            target="_blank"
+            ><img src="img/linkedin.png" alt="Linkedin" width="40px"
+          /></a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="sobre-mim">
+      <img src="img/jess.png" width="25%" />
+      <h2>Olá, seja bem-vind@</h2>
+      <p>
+        Sou estudante de desenvolvimento web frontend, comecei a estudar
+        programação em 2019 e a cada dia aprendo algo novo. Gosto de desafios e
+        encontrar soluções para qualquer questão. Estou em formação, portanto,
+        aqui tenho projetos bem simples que realizei para clientes.
+      </p>
+    </div>
+
+    <div class="formacao">
+      <h2>Formação</h2>
+      <!--<img id="img" src="img/projeto.jpg">-->
+
+      <img src="img/labenu.png" />
+
+      <p>
+        Labenu - Iniciei meus estudos na Labenu, em 22 de fevereiro de 2021.
+      </p>
+    </div>
+
+    <h2>Projetos</h2>
+    <div class="projetos">
+      <div class="site">
+        <h2>
+          <abbr title="Federação de Karatê de Contato Bushidoryu do RS"
+            >FKCBERS</abbr
+          >
+        </h2>
+        <p>
+          Este é um website simples, que contém informações sobre a
+          <abbr title="Federação de Karatê de Contato Bushidoryu do RS"
+            >FKCBERS</abbr
+          >, foi meu utlimo trabalho.
+        </p>
+
+        <button id="btn">
+          <a href="site1.html"><span>&plus; Detalhes</span></a>
+        </button>
+      </div>
+      <div class="site">
+        <h2>Academia Cobra Bushidoryu</h2>
+        <p>Projeto para a Academia Cobra Bushidoryu.</p>
+        <button id="btn">
+          <a href="site2.html"><span>&plus; Detalhes</span></a>
+        </button>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="hard-skills">
+        <h2>Hard Skills</h2>
+        <li>HTML</li>
+        <p></p>
+        <li>CSS</li>
+        <p></p>
+        <li>VS Code</li>
+        <p></p>
+      </div>
+
+      <div class="soft-skills">
+        <h2>Soft Skills</h2>
+        <li>Trabalho em equipe</li>
+        <p>
+          Gosto de fazer parte de uma equipe e dividir as tarefas de projetos
+          com outros colegas.
+        </p>
+
+        <li>Aprendizagem contínua</li>
+        <p>
+          Sempre estou buscando aprender sobre alguma coisa. Lendo sobre o
+          assunto, estudando sobre ele, praticando e conversando com pessoas que
+          tenham interesse em comum.
+        </p>
+        <li>Resolução de problemas</li>
+        <p>
+          Quando tenho algum problema ou alguma questão para tratar, penso muito
+          sobre as possiveis soluções e maneiras de aplicá-las para resolver
+          determinado problema. Não gosto de deixar coisas pendentes, resolvo o
+          que posso.
+        </p>
+      </div>
+    </div>
+    <div id="form">
+      <form id="formulario">
+        <fieldset>
+          <legend>Envie uma mensagem para mim</legend>
+          <label for="name">Nome:</label>
+          <input type="text" id="name" name="name" /><br />
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" /><br />
+
+          <div>
+            <label for="message">Mensagem:</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="button"><button type="submit">Enviar</button></div>
+        </fieldset>
+      </form>
+    </div>
+
+    <footer>
+      <h2>Minhas redes sociais</h2>
+      <a href="https://github.com/jessicalatorrecabral" target="_blank"
+        ><img src="img/github.png" alt="GitHub" width="60px"
+      /></a>
+      <a href="https://www.instagram.com/jessica.latorre182/" target="_blank"
+        ><img src="img/insta.png" alt="Instagram" width="60px"
+      /></a>
+      <a href="https://www.linkedin.com/in/jessicalatorre182" target="_blank"
+        ><img src="img/linkedin.png" alt="Linkedin" width="60px"
+      /></a>
+
+      <p id="copy">Copyright &copy;2021 - Desenvolvido por mim</p>
+    </footer>
+  </body>
+</html>
