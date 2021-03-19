@@ -1,0 +1,197 @@
+/* Respostas do joguinho Flexbox Froggy*/
+
+/* lvl 1 */
+#pond {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* lvl 2 */
+
+#pond {
+  display: flex;
+  justify-content: center;
+}
+/* lvl 3 */
+
+#pond {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* lvl 4 */
+
+#pond {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* lvl 5 */
+
+#pond {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* lvl 6 */
+
+#pond {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* lvl 7 */
+
+#pond {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+/* lvl 8 */
+
+#pond {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* lvl 9 */
+
+#pond {
+  display: flex;
+  flex-direction: column;
+}
+
+/* lvl 10 */
+
+#pond {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+/* lvl 11 */
+
+#pond {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* lvl 12 */
+
+#pond {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+/* lvl 13 */
+
+#pond {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+
+/* lvl 14 */
+
+#pond {
+  display: flex;
+}
+
+.yellow {
+  order: 1;
+}
+
+/* lvl 15 */
+
+#pond {
+  display: flex;
+}
+
+.red {
+  order: -4;
+}
+
+/* lvl 16 */
+
+#pond {
+  display: flex;
+  align-items: flex-start;
+}
+
+.yellow {
+  align-self: flex-end;
+}
+
+/* lvl 17 */
+
+#pond {
+  display: flex;
+  align-items: flex-start;
+}
+
+.yellow {
+  order: 2;
+  align-self: flex-end;
+}
+
+/* lvl 18 */
+
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* lvl 19 */
+
+#pond {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* lvl 20 */
+
+#pond {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* lvl 21 */
+
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* lvl 22 */
+
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+/* lvl 23 */
+
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column-reverse;
+}
+
+/* lvl 24 */
+
+#pond {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-content: space-between;
+}
