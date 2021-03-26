@@ -1,0 +1,178 @@
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+div {
+  border: 1px solid black;
+}
+#main-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#first-block {
+  background-color: red;
+  margin-bottom: 16px;
+  height: 12vh;
+  width: 100%;
+}
+
+.blue-block {
+  background-color: blue;
+  width: 30%;
+  height: 16vh;
+  flex-grow: 2;
+  margin-left: 8px;
+  margin-bottom: 8px;
+  margin-right: 16px;
+}
+
+.yellow-block {
+  background-color: yellow;
+  width: 30%;
+  flex-grow: 2;
+  margin-bottom: 8px;
+  margin-right: 16px;
+  height: 16vh;
+}
+
+.green-block {
+  background-color: green;
+  width: 30%;
+  height: 16vh;
+  margin-right: 8px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.black-block {
+  background-color: black;
+  width: 46vw;
+  color: white;
+  height: 40vh;
+  margin-right: 8px;
+}
+#main-container :nth-child(8) {
+  margin-left: 8px;
+  margin-right: 0;
+}
+.blocos-finais {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.white-block {
+  background-color: white;
+  margin-top: 8px;
+  width: 30%;
+  height: 40vh;
+  margin-left: 8px;
+}
+#main-container :last-child {
+  margin-left: 0;
+  margin-right: 8px;
+}
+@media screen and (min-width: 320px) and (max-width: 420px) {
+  #main-container {
+    display: flex;
+  }
+
+  .blue-block {
+    background-color: blue;
+    width: 100%;
+    margin: 16px;
+  }
+
+  .yellow-block {
+    background-color: yellow;
+    width: 100%;
+    margin: 16px;
+  }
+
+  .green-block {
+    background-color: green;
+    width: 100%;
+
+    margin: 16px;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .black-block {
+    background-color: black;
+    width: 100%;
+    color: white;
+    margin: 16px;
+    height: 16vh;
+  }
+  .white-block {
+    background-color: white;
+    height: 16vh;
+    width: 100%;
+    margin: 16px;
+  }
+
+  #main-container :nth-child(8) {
+    margin: 16px;
+  }
+
+  #main-container :last-child {
+    margin: 16px;
+  }
+}
+@media screen and (min-width: 421px) and (max-width: 800px) {
+  #main-container {
+    display: flex;
+  }
+
+  .blue-block {
+    background-color: blue;
+    width: 40%;
+  }
+
+  .yellow-block {
+    background-color: yellow;
+    width: 40%;
+  }
+
+  .green-block {
+    background-color: green;
+    width: 100%;
+    margin: 16px;
+  }
+  /*
+  .container {
+    display: flex;
+  }*/
+
+  .black-block {
+    background-color: black;
+    width: 42vw;
+    color: white;
+    margin: 16px;
+    height: 30vh;
+  }
+  .white-block {
+    background-color: white;
+    height: 16vh;
+    width: 42vw;
+    margin: 16px;
+  }
+
+  #main-container :nth-child(8) {
+    margin: 16px;
+  }
+  #main-container :last-child {
+    width: 100%;
+    margin: 16px;
+  }
+}
