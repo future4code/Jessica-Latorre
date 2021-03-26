@@ -3,7 +3,6 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
-  text-align: center;
 }
 
 div {
@@ -23,6 +22,7 @@ div {
 }
 
 .blue-block {
+  display: flex;
   background-color: blue;
   width: 30%;
   height: 16vh;
@@ -30,22 +30,30 @@ div {
   margin-left: 8px;
   margin-bottom: 8px;
   margin-right: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
 .yellow-block {
+  display: flex;
   background-color: yellow;
   width: 30%;
   flex-grow: 2;
   margin-bottom: 8px;
   margin-right: 16px;
   height: 16vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .green-block {
+  display: flex;
   background-color: green;
   width: 30%;
   height: 16vh;
   margin-right: 8px;
+  justify-content: center;
+  align-items: center;
 }
 .container {
   display: flex;
@@ -53,11 +61,14 @@ div {
   flex-direction: column;
 }
 .black-block {
+  display: flex;
   background-color: black;
   width: 46vw;
   color: white;
   height: 40vh;
   margin-right: 8px;
+  justify-content: center;
+  align-items: center;
 }
 #main-container :nth-child(8) {
   margin-left: 8px;
@@ -69,11 +80,14 @@ div {
   flex-direction: column;
 }
 .white-block {
+  display: flex;
   background-color: white;
   margin-top: 8px;
   width: 30%;
   height: 40vh;
   margin-left: 8px;
+  justify-content: center;
+  align-items: center;
 }
 #main-container :last-child {
   margin-left: 0;
@@ -85,9 +99,12 @@ div {
   }
 
   .blue-block {
+    display: flex;
     background-color: blue;
     width: 100%;
     margin: 16px;
+    justify-content: center;
+    align-items: center;
   }
 
   .yellow-block {
@@ -99,7 +116,6 @@ div {
   .green-block {
     background-color: green;
     width: 100%;
-
     margin: 16px;
   }
 
@@ -149,11 +165,6 @@ div {
     width: 100%;
     margin: 16px;
   }
-  /*
-  .container {
-    display: flex;
-  }*/
-
   .black-block {
     background-color: black;
     width: 42vw;
@@ -169,7 +180,7 @@ div {
   }
 
   #main-container :nth-child(8) {
-    margin: 16px;
+    margin: 14px;
   }
   #main-container :last-child {
     width: 100%;
