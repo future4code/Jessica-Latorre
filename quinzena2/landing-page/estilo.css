@@ -1,0 +1,520 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Lexend", sans-serif;
+  line-height: 1.6;
+}
+/* Propriedades do header*/
+#header-container {
+  width: 100%;
+  height: 10vh;
+  padding-top: 20px;
+  display: flex;
+  font-size: 2em;
+  flex-direction: column;
+  background-color: #dbe3eb;
+}
+header {
+  background-color: #dbe3eb;
+  display: flex;
+  font-weight: bold;
+  justify-content: space-evenly;
+}
+header a {
+  text-decoration: none;
+  color: #3a3e3c;
+}
+/* Propriedades do logo */
+#logo {
+  background-color: #dbe3eb;
+  display: flex;
+  justify-content: center;
+}
+#logo img {
+  width: 20%;
+  height: 46vh;
+}
+/* propriedades da main*/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* background com o tenis laranja e msg*/
+#container-msg {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  height: 80vh;
+  background: url(img/main-tenis.jpg) no-repeat center;
+  background-size: cover;
+  color: #dbe3eb;
+}
+#msg-opacidade {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-self: center;
+  background-color: rgba(58, 62, 60, 0.6);
+}
+#titulo {
+  align-self: center;
+  text-align: center;
+  padding: 20px;
+  width: 70%;
+}
+#subtitulo {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+/* estilo dos cards intercalados */
+.wrap-left {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  height: 58vh;
+  font-size: 1.6em;
+  margin-top: 40px;
+  margin-left: 8px;
+  align-self: flex-start;
+  background-color: #e0e8ee;
+}
+.text-left {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 23vh;
+  width: 40%;
+  padding: 8px;
+  margin-right: 4%;
+  color: #3a3e3c;
+}
+.foto-left img {
+  width: 32vw;
+}
+.wrap-right {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  height: 58vh;
+  font-size: 1.6em;
+  align-self: flex-end;
+  background-color: #8c8c84;
+  margin-top: 40px;
+  margin-right: 8px;
+}
+.text-right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4%;
+  height: 23vh;
+  width: 40%;
+  padding: 8px;
+  color: #e0e8ee;
+}
+.foto-right img {
+  width: 35vw;
+}
+/* comentarios de consumidores */
+#title-coments {
+  font-size: 1.8em;
+  text-align: center;
+  margin: 40px;
+}
+#wrap-coments {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.opinioes {
+  text-align: left;
+  color: black;
+  font-size: 20px;
+  width: 60%;
+  margin: 30px auto;
+  padding: 20px;
+}
+/* propriedades da seção sobre a 4Comfort */
+section {
+  display: flex;
+  justify-content: center;
+  background-color: #e0e8ee;
+}
+#wrap-about {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 90%;
+  padding: 18px;
+}
+.about {
+  font-size: 1.4em;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  padding: 10px;
+  justify-content: flex-start;
+  margin: 16px;
+  margin-right: 50px;
+}
+#foto-about img {
+  width: 30vw;
+  justify-content: flex-end;
+  padding: 30px;
+}
+/* padrão para buttons da pagina*/
+.btn-padrao {
+  width: 20%;
+  margin: 40px;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  padding: 8px 20px;
+  background-color: rgb(38, 202, 243);
+  color: white;
+  align-self: center;
+}
+/* formulario */
+form {
+  text-align: center;
+  background-color: #bdc7c8;
+  padding: 16px;
+  margin: 50px auto;
+  font-size: 18px;
+}
+input {
+  width: 20%;
+  height: 4vh;
+}
+form button {
+  padding: 8px;
+  margin-left: 8px;
+  border: none;
+  background-color: red;
+  color: white;
+}
+/*rodape*/
+footer {
+  font-size: 1.4em;
+  display: flex;
+  flex-direction: column;
+  background-color: #7c848c;
+  color: white;
+}
+#grid {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+#flex {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer li {
+  list-style-type: none;
+  color: white;
+}
+#social-icons {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  width: 40%;
+  height: 90px;
+}
+.social-icons {
+  width: 25%;
+}
+#social-icons a:hover {
+  opacity: 0.4;
+}
+.footer-sections {
+  margin: 20px 0;
+  width: 30vw;
+  text-align: center;
+}
+.footer-sections li:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 420px) {
+  #logo img {
+    width: 70%;
+    height: 50%;
+  }
+  #container-msg #subtitulo {
+    display: none;
+  }
+  #msg-opacidade {
+    width: 90%;
+  }
+  #container-msg {
+    height: 30vh;
+    font-size: 1.2em;
+  }
+  /*propriedades dos cards*/
+  .wrap-left {
+    flex-direction: column;
+    width: 90%;
+    margin: 16px auto;
+    height: 45%;
+  }
+  .text-left {
+    width: 80%;
+    height: 40%;
+    margin-bottom: 32px;
+  }
+  .foto-left {
+    width: 60%;
+    height: 40%;
+    margin-bottom: 32px;
+  }
+  .foto-left img {
+    width: 100%;
+  }
+  .wrap-right {
+    flex-direction: column;
+    width: 90%;
+    margin: 16px auto;
+    height: 45%;
+  }
+  .text-right {
+    width: 80%;
+    height: 40%;
+    margin-bottom: 32px;
+  }
+  .foto-right {
+    width: 60%;
+    height: 40%;
+    margin-top: 32px;
+  }
+  .foto-right img {
+    width: 100%;
+  }
+  .btn-padrao {
+    width: 45%;
+  }
+  #wrap-coments {
+    display: flex;
+    flex-direction: column;
+  }
+  #wrap-about {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+  }
+  .about {
+    height: 30%;
+    width: 90%;
+    margin: 0 auto;
+  }
+  #foto-about img {
+    width: 80%;
+    height: 100%;
+  }
+  input {
+    width: 80%;
+    margin: 10px;
+  }
+  #grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .social-icons {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 421px) and (max-width: 800px) {
+  /* header */
+  #header-container {
+    width: 100%;
+    height: 10vh;
+  }
+  header {
+    font-size: 1.6em;
+  }
+  /* logo grande */
+  #logo img {
+    width: 60%;
+    height: 50%;
+  }
+  /* back com o tenis laranja e msgs*/
+  #container-msg #subtitulo {
+    display: none;
+  }
+  #msg-opacidade {
+    width: 80%;
+  }
+  #container-msg {
+    height: 50vh;
+    font-size: 1.2em;
+  }
+  /* cards, aqui centralizados*/
+
+  .wrap-left {
+    flex-direction: column;
+    height: 40vh;
+    width: 90%;
+    margin: 16px auto;
+  }
+
+  .text-left {
+    width: 80%;
+    height: 40%;
+    margin-top: 32px;
+  }
+  .foto-left {
+    width: 80%;
+    height: 40%;
+    margin-bottom: 32px;
+  }
+  .foto-left img {
+    width: 100%;
+    height: 100%;
+  }
+  .wrap-right {
+    flex-direction: column;
+    height: 40vh;
+    width: 90%;
+    margin: 16px auto;
+  }
+  .text-right {
+    width: 80%;
+    height: 40%;
+    margin-bottom: 32px;
+  }
+  .foto-right {
+    width: 60%;
+    height: 40%;
+    margin-top: 32px;
+  }
+  .foto-right img {
+    width: 90%;
+    height: 100%;
+  }
+  .btn-padrao {
+    width: 40%;
+  }
+  #wrap-coments {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #wrap-about {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4em;
+  }
+  .about {
+    height: 30%;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #foto-about img {
+    width: 80%;
+    height: 100%;
+  }
+  input {
+    width: 80%;
+    margin: 10px;
+  }
+  #grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .social-icons {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+  /* Propriedades do header*/
+  #header-container {
+    width: 100%;
+    height: 10vh;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #dbe3eb;
+  }
+  header {
+    font-size: 1.6em;
+    background-color: #dbe3eb;
+    display: flex;
+    font-weight: bold;
+    justify-content: space-evenly;
+  }
+  header a {
+    text-decoration: none;
+    color: #3a3e3c;
+  }
+  /* Propriedades do logo */
+  #logo {
+    background-color: #dbe3eb;
+    display: flex;
+    justify-content: center;
+  }
+  #logo img {
+    width: 60%;
+    height: 50%;
+  }
+  #msg-opacidade {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+  }
+  /* cards intercalados*/
+  .wrap-left {
+    height: 30vh;
+  }
+  .text-left {
+    justify-content: center;
+  }
+  .foto-left img {
+    width: 32vw;
+  }
+  .wrap-right {
+    height: 30vh;
+  }
+  .text-right {
+    justify-content: center;
+  }
+  .foto-right img {
+    width: 35vw;
+  }
+  /* comentarios de consumidores */
+  #title-coments {
+    text-align: center;
+    margin: 40px;
+    font-size: 1.8em;
+  }
+  #wrap-coments {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .btn-padrao {
+    width: 20%;
+  }
+  input {
+    width: 25%;
+    height: 3vh;
+  }
+}
