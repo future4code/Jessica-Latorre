@@ -1,5 +1,6 @@
 let contadorDeTarefa = 0
 
+
 function adicionarTarefa(){
     let tarefa = document.getElementById("tarefa").value
     if (tarefa === ""){ //item 1 do desafio proposto.
@@ -10,14 +11,16 @@ function adicionarTarefa(){
     let idTarefa = `tarefa-${contadorDeTarefa}`
     let horarioTarefa = confirm("Deseja adicionar um horário a esta tarefa?")
     if (horarioTarefa === true){
+        
         let horario = prompt("Adicione um horário para esta tarefa. (ex.: 00h, 13h)")// adiciona horario as tarefas criadas.
         document.getElementById(diaSemana).innerHTML += `<p id=${idTarefa} onclick='riscarTarefa("${idTarefa}")'>- ` + tarefa + ` início às: `+ horario + ` </p>`
         document.getElementById("tarefa").value = ""
     } else{
-        document.getElementById(diaSemana).innerHTML += `<p>- ` + tarefa + ` </p>`
+        
+        document.getElementById(diaSemana).innerHTML += `<p id=${idTarefa} onclick='riscarTarefa("${idTarefa}")'>- ` + tarefa + ` </p>`
         document.getElementById("tarefa").value = ""
     }
-    
+    contadorDeTarefa++
 }
 function riscarTarefa(id){
     let tarefa = document.getElementById(id)
