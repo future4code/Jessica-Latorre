@@ -10,21 +10,29 @@ function inverteArray(array) {
 
 function retornaNumerosParesElevadosADois (array) {
    // implemente sua lógica aqui
-   let arrayPares =[]
+   let arrayParesAoQuadrado =[]
    for(let numero of array){
       
       if(numero % 2 === 0){
          numero *= numero
-        arrayPares.push(numero)
+        arrayParesAoQuadrado.push(numero)
       }
    }
-   return arrayPares
+   return arrayParesAoQuadrado
 }
 
 //Exercício 3
 
 function retornaNumerosPares (array) {
    // implemente sua lógica aqui
+   let arrayPares = []
+   for(let numero of array){
+      if(numero % 2 === 0){
+         arrayPares.push(numero)
+      }
+   }
+   return arrayPares
+
 }
 
 //Exercício 4
