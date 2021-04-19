@@ -63,12 +63,16 @@ function retornaQuantidadeElementos (array) {
 
 function retornaExpressoesBooleanas() {
    // implemente sua lógica aqui
+  const resposta = [false,false,true,true,true]
+  return resposta
+
 }
 
 //Exercício 7
 
 function retornaNNumerosPares(n) {
    // implemente sua lógica aqui
+   
 }
 
 // Exercício 8
