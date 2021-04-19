@@ -39,6 +39,13 @@ function retornaNumerosPares (array) {
 
 function retornaMaiorNumero(array) {
    // implemente sua lógica aqui
+  let maiorNumero = 0 
+  for(let numero of array){
+     if(numero > maiorNumero){
+        maiorNumero = numero
+     }
+  }
+  return maiorNumero
 }
 
 //Exercício 5
