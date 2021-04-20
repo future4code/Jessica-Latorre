@@ -86,7 +86,7 @@ function retornaNNumerosPares(n) {
 function checaTriangulo(a, b, c) {
   // implemente sua lógica aqui
   let tipoTriangulo
-  if(a === b && b === c && c === a){
+  if(a === b && b === c){
     
    tipoTriangulo = 'Equilátero'
    
@@ -108,12 +108,15 @@ return tipoTriangulo
 
 function comparaDoisNumeros(num1, num2) {
    // implemente sua lógica aqui
+  
+     
 }
 
 // Exercício 10
 
 function segundoMaiorEMenor(array) {
    // implemente sua lógica aqui
+
 }
 
 //Exercício 11
