@@ -132,18 +132,16 @@ function comparaDoisNumeros(num1, num2) {
   }   
   return objeto
 
-
-
-
-  
-
-
 }
 // Exercício 10
 
 function segundoMaiorEMenor(array) {
    // implemente sua lógica aqui
-
+  
+   
+  
+  
+  
 }
 
 //Exercício 11
@@ -156,18 +154,41 @@ function ordenaArray(array) {
 
 function filmeFavorito() {
    // implemente sua lógica aqui
+   const filme = {
+      nome: "O Diabo Veste Prada",
+      ano: 2006,
+      diretor: "David Frankel",
+      atores: ['Meryl Streep', 'Anne Hathaway', 'Emily Blunt', 'Stanley Tucci']
+   }
+   return filme
 }
 
 // Exercício 13
 
 function imprimeChamada() {
    // implemente sua lógica aqui
+   const filme = {
+      nome: "O Diabo Veste Prada",
+      ano: 2006,
+      diretor: "David Frankel",
+      atores: ['Meryl Streep', 'Anne Hathaway', 'Emily Blunt', 'Stanley Tucci']
+   }
+   
+   return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores[0]}, ${filme.atores[1]}, ${filme.atores[2]} e ${filme.atores[3]}`
+  
 }
 
 // Exercício 14
 
 function criaRetangulo(lado1, lado2) {
    // implemente sua lógica aqui
+   let retangulo = {
+      largura:lado1,
+      altura: lado2,
+      perimetro: 2 * (lado1 + lado2),
+      area: lado1 * lado2
+   }
+   return retangulo
 }
 
 // Exercício 15
