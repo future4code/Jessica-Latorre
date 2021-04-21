@@ -195,7 +195,19 @@ function criaRetangulo(lado1, lado2) {
 
 function anonimizaPessoa(pessoa) {
    // implemente sua lógica aqui
+  let nomeAnonimo = {
+      nome: "Astrodev",
+      idade: 25,
+      email: "astrodev@future4.com.br",
+      endereco: "Rua do Futuro, 4"
+   
+  }
+  nomeAnonimo.nome = "ANÔNIMO"
+  
+  return nomeAnonimo
 }
+
+
 
 // Exercício 16
 
