@@ -137,7 +137,41 @@ function comparaDoisNumeros(num1, num2) {
 
 function segundoMaiorEMenor(array) {
    // implemente sua lógica aqui
-  
+   let valorMaior = array[0]
+   let indexMaior = 0 
+   let valorMenor = array[0] 
+   let indexMenor = 0
+  for (let i = 0; i < array.length; i++){ 
+        if (array[i] > valorMaior){ 
+      valorMaior = array[i]     
+       indexMaior = i   
+      }if (array[i] < valorMenor){ 
+       valorMenor = array[i]     
+       indexMenor = i   
+      } 
+   }
+   let secondMaximumValue = -1
+   let secondMaximumIndex = -1 
+   let secondMinimumValue = -1 
+   let secondMinimumIndex = -1
+
+  for (let i = 0; i < array.length; i++) {
+         if (array[i] > secondMaximumValue && i != maximumIndex){    
+              secondMaximumValue = array[i]  
+                  secondMaximumIndex = i   
+                }   
+                   if (secondMinimumValue == -1 && i != minimumIndex) {
+                            secondMinimumValue = array[i]    
+                              secondMinimumIndex = i  
+                             }    if (array[i] < secondMinimumValue) {
+                                      secondMinimumValue = array[i]    
+                                        secondMinimumIndex = i   
+                                        } 
+                                        }  
+const secondMinorAndMajor = [secondMaximumValue, secondMinimumValue] 
+ return secondMinorAndMajor
+
+
    
   
   
