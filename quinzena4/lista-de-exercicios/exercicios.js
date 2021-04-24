@@ -240,18 +240,14 @@ function criaRetangulo(lado1, lado2) {
 
 function anonimizaPessoa(pessoa) {
    // implemente sua lógica aqui
+   const pessoaAnonima = {
+      ...pessoa
+   }
+   pessoaAnonima.nome ="ANÔNIMO"
+
+   return pessoaAnonima
    
    
-  let nomeAnonimo = {
-      nome: "Astrodev",
-      idade: 25,
-      email: "astrodev@future4.com.br",
-      endereco: "Rua do Futuro, 4"
-   
-  }
-  nomeAnonimo.nome = "ANÔNIMO"
-  
-  return nomeAnonimo
 }
 
 
@@ -268,17 +264,23 @@ const arrayDePessoas = [
 // Exercício 16, letra A
 
 function maioresDe18(arrayDePessoas) {
-   
    // implemente sua lógica aqui
-   
-   
-   
+   let adultos = arrayDePessoas.filter((pessoa) =>{
+      return pessoa.idade >= 18
+   })
+
+   return adultos
 }
 
 // Exercício 16, letra B
 
 function menoresDe18(arrayDePessoas) {
    // implemente sua lógica aqui
+   let criancasAdolescentes = arrayDePessoas.filter((pessoa)=>{
+      return pessoa.idade < 18
+   }
+   )
+   return criancasAdolescentes
    
 }
 
@@ -286,18 +288,36 @@ function menoresDe18(arrayDePessoas) {
 
 function multiplicaArrayPor2(array) {
    // implemente sua lógica aqui
+   let dobro = array.map((elemento) =>{
+      return elemento * 2
+
+   })
+    return dobro 
 }
 
 // Exercício 17, letra B
 
 function multiplicaArrayPor2S(array) {
   // implemente sua lógica aqui
+  let dobro = array.map(elemento =>{
+     return (elemento * 2).toString()
+  })
+  return dobro
 }
 
 // Exercício 17, letra C
 
 function verificaParidade(array) {
    // implemente sua lógica aqui
+   let arrayNumeros = array.map((elemento) =>{
+      if(elemento % 2 === 0){
+         return `${elemento} é par`
+      } else {
+         return `${elemento} é ímpar`
+      }
+
+   })
+   return arrayNumeros
 }
 
 // Exercício 18
@@ -315,6 +335,14 @@ const pessoas = [
 
 function retornaPessoasAutorizadas() {
    // implemente sua lógica aqui
+   let pessoasAutorizadas = []
+   for(let elemento of pessoas){
+      if(elemento.altura >= 1.5 && elemento.idade > 14 && elemento.idade < 60){
+         pessoasAutorizadas.push(elemento)
+      } 
+
+   }
+   return pessoasAutorizadas
 }
 
 
@@ -322,6 +350,13 @@ function retornaPessoasAutorizadas() {
 
 function retornaPessoasNaoAutorizadas() {
    // implemente sua lógica aqui
+   let pessoasProibidas = []
+   for(let elemento of pessoas){
+      if(elemento.altura < 1.5 || elemento.idade < 14 || elemento.idade > 60){
+         pessoasProibidas.push(elemento)
+      }
+   }
+   return pessoasProibidas
 }
 
 //Exercício 19
@@ -335,8 +370,11 @@ const consultas = [
 
 function retornaEmailConsulta() {
   // implemente sua lógica aqui
+ 
 }
 
+
+//Exercício 19, letra A
 
 function ordenaPorNome() {
   
@@ -368,4 +406,13 @@ const contas = [
 
 function atualizaSaldo() {
   // implemente sua lógica aqui
+  contas.forEach((conta) => {
+   let totalDeCompras = 0
+   conta.compras.forEach((valor) => {
+     totalDeCompras += valor
+   })
+   conta.saldoTotal -= totalDeCompras
+ })
+ return contas
+
 }
