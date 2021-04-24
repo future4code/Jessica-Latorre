@@ -22,3 +22,21 @@ section {
   width: 14%;
   padding: 5px;
 }
+.tarefa-riscada {
+  text-decoration: line-through;
+}
+@media screen and (min-width: 320px) and (max-width: 420px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  .semana {
+    height: 25%;
+    width: 80%;
+  }
+}
