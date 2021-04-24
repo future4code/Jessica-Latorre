@@ -91,7 +91,10 @@ function filtrarDespesas(){
     let valorMax = Number(document.getElementById('valorFiltroMax').value)
 
 
-    let despesasFiltradas // AQUI NESSA VARIÁVEL VEM A IMPLEMENTAÇÃO
+   
+     
+    
+    // AQUI NESSA VARIÁVEL VEM A IMPLEMENTAÇÃO
 
     imprimirDespesas(despesasFiltradas)
 }
