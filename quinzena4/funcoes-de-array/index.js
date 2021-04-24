@@ -10,8 +10,9 @@ function imprimirDespesas(despesas){
 
     // AQUI VEM A IMPLEMENTAÇÃO
     despesas.forEach(despesa => {
-        divDespesas.innerHTML += `<p>Valor: R$ ${despesa.valor} | Tipo: ${despesa.tipo} | Descrição: ${despesa.descricao}</p>`
+        divDespesas.innerHTML += `<p>Valor: R$${despesa.valor} | Tipo: ${despesa.tipo} | Descrição: ${despesa.descricao}</p>`
     })
+    console.log(arrDespesas)
 }
 
 
@@ -23,15 +24,17 @@ function imprimirExtrato(){
     let gastoUtilidades = 0
     let gastoViagem = 0
 
-  arrDespesas.forEach((despesa) =>{
+ arrDespesas.forEach((despesa) => {
+      
 
-    if(despesa.tipo = "alimentação"){
-        gastoAlimentacao = despesa.valor
+    if(despesa.tipo == 'utilidades'){
+        gastoUtilidades += despesa.valor
         
-    }else if(despesa.tipo = "utilidades"){
-        gastoUtilidades = despesa.valor
-    }else if(despesa.tipo = "viagem"){
-        gastoViagem = despesa.valor
+    }else if(despesa.tipo == 'alimentação'){
+        gastoAlimentacao += despesa.valor
+
+    }else if(despesa.tipo == 'viagem'){
+        gastoViagem += despesa.valor
     }
     
     
