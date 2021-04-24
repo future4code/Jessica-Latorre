@@ -137,52 +137,63 @@ function comparaDoisNumeros(num1, num2) {
 
 function segundoMaiorEMenor(array) {
    // implemente sua lógica aqui
-   let valorMaior = array[0]
-   let indexMaior = 0 
-   let valorMenor = array[0] 
+   let numeroMaior = 0
+   let numeroMenor = Infinity
+   let segundoMaior = 0
+   let segundoMenor = Infinity
+   let segundoMaiorEmenor = []
+   let indexMaior = 0
    let indexMenor = 0
-  for (let i = 0; i < array.length; i++){ 
-        if (array[i] > valorMaior){ 
-      valorMaior = array[i]     
-       indexMaior = i   
-      }if (array[i] < valorMenor){ 
-       valorMenor = array[i]     
-       indexMenor = i   
-      } 
-   }
-   let secondMaximumValue = -1
-   let secondMaximumIndex = -1 
-   let secondMinimumValue = -1 
-   let secondMinimumIndex = -1
 
-  for (let i = 0; i < array.length; i++) {
-         if (array[i] > secondMaximumValue && i != maximumIndex){    
-              secondMaximumValue = array[i]  
-                  secondMaximumIndex = i   
-                }   
-                   if (secondMinimumValue == -1 && i != minimumIndex) {
-                            secondMinimumValue = array[i]    
-                              secondMinimumIndex = i  
-                             }    if (array[i] < secondMinimumValue) {
-                                      secondMinimumValue = array[i]    
-                                        secondMinimumIndex = i   
-                                        } 
-                                        }  
-const secondMinorAndMajor = [secondMaximumValue, secondMinimumValue] 
- return secondMinorAndMajor
-
-
+   for(let i of array){
+      if ( i < numeroMenor){
+         numeroMenor = i
+         indexMenor = array.indexOf(numeroMenor)
+      }if(i > numeroMaior){
+         numeroMaior = i
+         indexMaior = array.indexOf(numeroMaior)
+         
+      }
+   } 
    
+array.splice(indexMaior, 1)
+array.splice(indexMenor, 1)
+
+for(let i of array){
+   if(i < segundoMenor){
+      segundoMenor = i
+   }
+   if(i > segundoMaior){
+      segundoMaior = i
+   }
   
-  
-  
+
+}
+segundoMaiorEmenor.push(segundoMaior)
+segundoMaiorEmenor.push(segundoMenor)
+
+return segundoMaiorEmenor
 }
 
 //Exercício 11
 
 function ordenaArray(array) {
    // implemente sua lógica aqui
-}
+   
+ for(let i = 0; i < array.length; i++) {
+  for(let j = 0; j < array.length; j++) {
+   if(array[j] > array[j + 1]) {
+    let tmp = array[j];
+     array[j] = array[j + 1];
+     array[j + 1] = tmp;
+    }
+   }
+  }
+return array
+
+   }
+
+
 
 // Exercício 12
 
@@ -229,6 +240,8 @@ function criaRetangulo(lado1, lado2) {
 
 function anonimizaPessoa(pessoa) {
    // implemente sua lógica aqui
+   
+   
   let nomeAnonimo = {
       nome: "Astrodev",
       idade: 25,
@@ -300,14 +313,14 @@ const pessoas = [
 
 //Exercício 18, letra A
 
-function retornaPessoasAutorizadas(pessoas) {
+function retornaPessoasAutorizadas() {
    // implemente sua lógica aqui
 }
 
 
 // Exercício 18, letra B
 
-function retornaPessoasNaoAutorizadas(pessoas) {
+function retornaPessoasNaoAutorizadas() {
    // implemente sua lógica aqui
 }
 
@@ -320,8 +333,26 @@ const consultas = [
   { nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
   ]
 
-function retornaEmailConsulta(consultas) {
+function retornaEmailConsulta() {
   // implemente sua lógica aqui
+}
+
+
+function ordenaPorNome() {
+  
+}
+
+// Exercício 19, letra B
+
+const consultasData = [
+  { nome: "João", dataDaConsulta: "01/10/2021" },
+  { nome: "Pedro", dataDaConsulta: "02/07/2021" },
+  { nome: "Paula", dataDaConsulta: "03/11/2021" },
+  { nome: "Márcia",  dataDaConsulta: "04/05/2021" }
+]
+
+function ordenaPorData() {
+
 }
 
 //Exercício 20
