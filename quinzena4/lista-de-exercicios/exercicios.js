@@ -149,7 +149,7 @@ function segundoMaiorEMenor(array) {
       if ( i < numeroMenor){
          numeroMenor = i
          indexMenor = array.indexOf(numeroMenor)
-      }if(i > numeroMaior){
+      } if(i > numeroMaior){
          numeroMaior = i
          indexMaior = array.indexOf(numeroMaior)
          
@@ -161,10 +161,10 @@ array.splice(indexMenor, 1)
 
 for(let i of array){
    if(i < segundoMenor){
-      segundoMenor = i
+      segundoMenor=i
    }
    if(i > segundoMaior){
-      segundoMaior = i
+      segundoMaior =i
    }
   
 
@@ -306,10 +306,10 @@ function multiplicaArrayPor2S(array) {
 }
 
 // Exercício 17, letra C
-
+let arrayNumeros =[]
 function verificaParidade(array) {
    // implemente sua lógica aqui
-   let arrayNumeros = array.map((elemento) =>{
+    arrayNumeros = array.map(elemento =>{
       if(elemento % 2 === 0){
          return `${elemento} é par`
       } else {
@@ -361,37 +361,43 @@ function retornaPessoasNaoAutorizadas() {
 
 //Exercício 19
 
-const consultas = [
-  { nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
-  { nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
-  { nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
-  { nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
-  ]
-
-function retornaEmailConsulta() {
-  // implemente sua lógica aqui
+const consultasNome = [
+   { nome: "João", dataDaConsulta: "01/10/2021" },
+   { nome: "Pedro", dataDaConsulta: "02/07/2021" },
+   { nome: "Paula", dataDaConsulta: "03/11/2021" },
+   { nome: "Márcia",  dataDaConsulta: "04/05/2021" }
+ ]
  
-}
+ //Exercício 19, letra A
+ 
+ function ordenaPorNome() {
+    consultasNome.sort(function(a,b) {
+       if(a.nome < b.nome){
+          return -1
+       }else{
+          return true
+       }
 
-
-//Exercício 19, letra A
-
-function ordenaPorNome() {
+    })
+    consultasNome.sort()
+    return consultasNome
   
-}
+ }
+ 
+ // Exercício 19, letra B
+ 
+ const consultasData = [
+   { nome: "João", dataDaConsulta: "01/10/2021" },
+   { nome: "Pedro", dataDaConsulta: "02/07/2021" },
+   { nome: "Paula", dataDaConsulta: "03/11/2021" },
+   { nome: "Márcia",  dataDaConsulta: "04/05/2021" }
+ ]
+ 
+ function ordenaPorData() {
+   
+    
+ }
 
-// Exercício 19, letra B
-
-const consultasData = [
-  { nome: "João", dataDaConsulta: "01/10/2021" },
-  { nome: "Pedro", dataDaConsulta: "02/07/2021" },
-  { nome: "Paula", dataDaConsulta: "03/11/2021" },
-  { nome: "Márcia",  dataDaConsulta: "04/05/2021" }
-]
-
-function ordenaPorData() {
-
-}
 
 //Exercício 20
 
