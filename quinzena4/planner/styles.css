@@ -2,25 +2,69 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "KoHo", sans-serif;
 }
-
+body {
+  margin-top: 40px;
+  background-image: url(imagens/background-planner2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 header {
   height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
 }
 
 section {
   display: flex;
   justify-content: space-evenly;
   height: 90vh;
+  font-weight: bold;
+}
+#select-font {
+  font-weight: bold;
+}
+.all-buttons {
+  margin: 0px 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  padding: 2px 10px;
+  color: white;
+}
+#green-button {
+  background-color: #a4bfd9;
+}
+.all-buttons:hover {
+  background: #a770ef; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fdb99b,
+    #cf8bf3,
+    #a770ef
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fdb99b,
+    #cf8bf3,
+    #a770ef
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#red-button {
+  background-color: #a1a6c4;
 }
 
 .semana {
-  border: 1px solid blue;
+  border-left: 1px solid black;
+
   width: 14%;
   padding: 5px;
+}
+section > :first-child {
+  border-left: none;
 }
 .tarefa-riscada {
   text-decoration: line-through;
@@ -38,5 +82,14 @@ section {
   .semana {
     height: 25%;
     width: 80%;
+    border-bottom: 1px solid black;
+    border-left: none;
+  }
+
+  .all-buttons {
+    margin: 8px 10px;
+    border: none;
+    font-weight: bold;
+    padding: 2px 10px;
   }
 }
