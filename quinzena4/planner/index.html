@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="index.js"></script>
     <title>Planner</title>
   </head>
@@ -24,8 +30,12 @@
         </select>
       </form>
 
-      <button onclick="adicionarTarefa()">Criar tarefa</button>
-      <button onclick="limparTarefas()">Limpar tarefas</button>
+      <button class="all-buttons" id="green-button" onclick="adicionarTarefa()">
+        Criar tarefa
+      </button>
+      <button class="all-buttons" id="red-button" onclick="limparTarefas()">
+        Limpar tarefas
+      </button>
     </header>
     <section>
       <div class="semana">
