@@ -30,15 +30,12 @@ font-size: 16px;
 export const Main = styled.div`
 display: flex;
 flex-direction: column;
-
-
 align-items: center;
 width: 90%;
 height: 90%;
 `
 
 export const Form = styled.div`
-
 
 margin-top: 50px;
 position: absolute;
@@ -82,7 +79,7 @@ export const Label = styled.label`
   top:0;
   left: 0;
   padding: 10px 0;
-  font-size: 16px;
+  font-size: 18px;
   color: #fff;
   pointer-events: none;
   transition: .5s;

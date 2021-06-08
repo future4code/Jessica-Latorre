@@ -35,7 +35,7 @@ criarPlaylist = () => {
     
   }).catch((err)=>{
     console.log(err.response)
-    toast.error('Algo não saiu bem..verifique se já existe esta playlist.')
+    toast.error('Algo não saiu bem...talvez já exista outra playlist com mesmo nome')
   })
 } 
   

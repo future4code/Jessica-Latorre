@@ -3,7 +3,7 @@ import axios from 'axios'
 import { ToastContainer, toast } from 'react-toast'
 
 
-import {CardPlaylist, MinhasPlaylists, H2, DelButton, IrHome, Div} from './PlaylistStyle'
+import {CardPlaylist, MinhasPlaylists, H2, DelButton, IrHome, Div, MinhasPlaylistsMain} from './PlaylistStyle'
 
 
 
@@ -58,12 +58,13 @@ class TelaPlaylists extends React.Component{
         return(
             <Div>
                 <IrHome onClick={this.props.irParaHome}>Ir para home</IrHome>
-                <MinhasPlaylists>
+                <MinhasPlaylistsMain>
                 <H2>Suas playlists</H2>
-                {listaPlaylists}
+                <MinhasPlaylists>
+                {listaPlaylists} 
                 </MinhasPlaylists>
+                </MinhasPlaylistsMain>
                 <ToastContainer/>
-                
             </Div>
         )
     }
