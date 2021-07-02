@@ -1,10 +1,10 @@
 import ListTripsPage from '../pages/ListTripsPage/ListTripsPage'
 import HomePage from '../pages/HomePage/HomePage'
-import AdminHomePage from '../pages/AdminHomePage'
-import ApplicationFormPage from '../pages/ApplicationFormPage'
-import CreateTripPage from '../pages/CreateTripPage'
-import LoginPage from '../pages/LoginPage'
-import TripDetailsPage from '../pages/TripDetailsPage'
+import AdminHomePage from '../pages/AdminHomePage/AdminHomePage'
+import ApplicationFormPage from '../pages/ApplicationFormPage/ApplicationFormPage'
+import CreateTripPage from '../pages/CreateTripPage/CreateTripPage'
+import LoginPage from '../pages/LoginPage/LoginPage'
+import TripDetailsPage from '../pages/TripDetailsPage/TripDetailsPage'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
 
@@ -13,7 +13,6 @@ function Router() {
     <BrowserRouter>
       <Switch>
         <Route exact path={'/'}>
-      
         <HomePage/>
         </Route>
         <Route exact path={"/trips/list"}>
@@ -31,7 +30,7 @@ function Router() {
         <Route exact path={"/login"}>
         <LoginPage/>
         </Route>
-        <Route exact path={"/tripDetails"}>
+        <Route exact path={"/tripDetails/:id"}>
         <TripDetailsPage/>
         </Route>
       

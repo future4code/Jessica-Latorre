@@ -30,7 +30,7 @@ export const SubTtituloHomePage = styled.h3`
     font-size: 30px;
     color: #fff;
     width: 32ch;
-    animation: ${Typing} 2s steps(22), ${Blink} .5s step-end infinite alternate;
+    animation: ${Typing} 4s steps(22), ${Blink} .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -51,11 +51,11 @@ export const HomePageButtons = styled.button`
     border-radius: 9px;
     border: none;
     color: #fff;
-    background-color: #ff5100;
+    background-color: #0e0b16;
     transition: 0.4s;
     &:hover{
         cursor:pointer;
-        background-color: #cc4100;
+        filter: brightness(2.5);
     }
 `
 
