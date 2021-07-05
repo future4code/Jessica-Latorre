@@ -20,6 +20,8 @@ export const TripDetails = styled.section`
 `
 export const TripCandidate = styled.section`
     border: black solid 3px;
+    display: flex;
+    flex-direction: column;
 `
 export const GoToBackButton = styled.button`
     width: 30%;

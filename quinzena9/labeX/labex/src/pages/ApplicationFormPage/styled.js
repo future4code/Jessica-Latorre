@@ -3,7 +3,8 @@ import astronauta1 from '../../assets/imgbackground.jpg'
 
 
 export const ContainerForm = styled.div`
-    background-image: linear-gradient(to top, #a239ca, #9f45d3, #9b4fdd, #9759e5, #9362ee);
+    // #a239ca, #9f45d3, #9b4fdd, #9759e5, #9362ee);
+    background-color: #fff;
     display: flex;
     flex-direction: column;   
     
@@ -40,7 +41,7 @@ export const GoToBackButton = styled.button`
         filter: brightness(2.5)
     }
 `
-export const FormWrapper = styled.div`
+export const FormWrapper = styled.form`
     display: flex;
     flex-direction: column;
     border: none;
@@ -50,7 +51,7 @@ export const FormWrapper = styled.div`
     margin: 50px auto;
     align-items: center;
     background-color: #fff;
-    box-shadow: 16px 17px 27px 1px rgba(26,23,26,0.65);
+    box-shadow: 16px 17px 27px 1px rgba(26,23,26,0.20);
 `
 
 
@@ -63,17 +64,7 @@ export const TextUser = styled.input`
     margin-bottom: 32px;
 `
 
-export const ScreenOnly = styled.label`
-    position: absolute;
-    height: 1px;
-    width: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip-path: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-`
+
 export const UserSelect = styled.select`
     outline: none;
     padding: 10px;

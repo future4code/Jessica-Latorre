@@ -1,106 +1,134 @@
 import React, {useState, useEffect} from 'react'
 import { useHistory } from 'react-router'
 import axios from 'axios'
-import {ContainerForm, HeaderApplicationFormPage, TituloFormPage, FormButton, SubTituloFormPage, GoToBackButton, FormWrapper, TextUser, ScreenOnly, UserSelect} from './styled'
+import {ContainerForm, HeaderApplicationFormPage, TituloFormPage, FormButton, SubTituloFormPage, GoToBackButton, FormWrapper, TextUser, UserSelect} from './styled'
+import { BASE_URL } from '../../constants/urls'
+import useForm from '../../hooks/useForm'
+//import {useRequestData} from '../../hooks/useRequestData'
 
 
-function ApplicationFormPage (props){
 
-    const[trips, setTrips] = useState([])
-    const[tripName, setTripName] = useState("")
-    const[nome, setNome]=useState("")
-    const[idade, setIdade] = useState(18)
-    const[texto, setTexto] = useState("")
-    const [profissao, setProfissao] = useState("")
-    const[pais, setPais] = useState("")
-
-    const handleTripName = (event) =>{
-        setTripName(event.target.value)
-    }
-
-    const handleNome = (event) =>{
-        setNome(event.target.value)
-    }
-    const handleIdade = (event) =>{
-        setIdade(event.target.value)
-    }
-
-    const handleTexto = (event) =>{
-        setTexto(event.target.value)
-    }
-    const handleProfissao = (event) =>{
-        setProfissao(event.target.value)
-    }
-    const handlePais = (event)=>{
-        setPais(event.target.value)
-    }
+export const ApplicationFormPage = ()=>{
     
-    const history = useHistory()
-    const goToBack = () =>{
-       history.goBack()
-    }
-
-    useEffect (()=>{
-        axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labeX/jessica-cabral-munoz/trips')
-        .then((response)=>{
-            setTrips(response.data.trips)
-            
-            
-            
+        const[trips, setTrips] = useState([])
         
-            
-        })
-       
-    },[])
-
-      
+        useEffect (()=>{
+            axios.get(`${BASE_URL}/trips`)
+            .then((response)=>{
+                setTrips(response.data.trips)
+            })
+        },[])
+        
     
+       
+    
+    
+        
+        
 
-    const applyToTrip =()=>{
-        const body={
-            name: nome,
-            age: idade,
-            applicationText: texto,
-            profession: profissao,
-            country: pais
+    
+    const  {form, onChange, cleanFields} = useForm({
+        trip: null,
+        name: "",
+        age: 0, 
+        applicationText: "", 
+        profession: "", 
+        country: "", 
+    })
+   
+  
+
+    const history = useHistory()
+    const goToBack = () => {
+    history.goBack()
+    }
+   
+   
+    
+    const applyToTrip =(event)=>{
+        event.preventDefault()
+
+       const body = {
+            name:form.name,
+            age: form.age,
+            applicationText: form.applicationText,
+            profession:form.profession,
+            country: form.country
         }
-        axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/jessica-cabral-munoz/trips/NoIFVcOiSgTKTIPVZwXS/apply', body)
+    
+        axios.post(`${BASE_URL}/trips/${form.id}/apply`, body)
         .then((response)=>{
-            
+            console.log(response.data)
+
             alert('voce aplicou corretamente, boa sorte')
-            
-            
+            cleanFields()
+
         })
         .catch((err)=>{
             alert('algo deu errado :( veja se falta algum campo não preenchido')
+            console.log(err.response)
+            
         })
     }
 
+    console.log(form)
     return(
         <ContainerForm>
             <HeaderApplicationFormPage>
                 <TituloFormPage>LabeX</TituloFormPage>
                 <SubTituloFormPage>Inscreva-se para uma viagem incrível!</SubTituloFormPage>
             </HeaderApplicationFormPage>
-            <FormWrapper>
-                    <UserSelect onChange={handleTripName}>
-                    <option value={tripName}>Escolha uma viagem</option>
+            <FormWrapper onSubmit={applyToTrip}>
+                <UserSelect onChange={onChange} 
+                 name={'trip'} 
+                 value={form['trip']}
+                >
+               
                     {trips.map((trip)=>{
-                        return (
-                            <option key={trip.id} value={trip.name}>{trip.name}</option>
-                        )
+                        return <option key={trip.id} value={trip} >{trip.name}</option>
                     })}
-                    
+                
+
                 </UserSelect>
-                <ScreenOnly for-id={'name'}>Nome completo</ScreenOnly>
-                <TextUser type={'text'} id={'name'} onClick={handleNome} placeholder={'Nome completo'}/>
-                <ScreenOnly for-id={'text'}>Texto de candidatura</ScreenOnly>
-                <TextUser type={'text'} id={'text'} onClick={handleTexto} placeholder={'Texto de candidatura'}/>
-                <ScreenOnly for-id={'profession'}>Profissão</ScreenOnly>
-                <TextUser type={'text'} onClick={handleProfissao} id={'profession'} placeholder={'Profissão'}/>
-                <ScreenOnly for-id={'quantity'}>Idade</ScreenOnly>
-                <TextUser type={'number'} onClick={handleIdade} id={'quantity'} min={18} max={99} placeholder={'Idade'}/>
-                <UserSelect onChange={handlePais}>
+           
+                
+                <TextUser  
+                name={"name"} 
+                value={form['name']}
+                onChange={onChange} 
+                required 
+                pattern={"^.{3,}"} 
+                title={"O nome deve ter no mínimo 3 letras."} 
+                placeholder={'Nome completo'}/>
+                
+                <TextUser 
+                name="applicationText" 
+                value={form['applicationText']} 
+                onChange={onChange} 
+                required 
+                placeholder={'Texto de candidatura'}/>
+                
+                <TextUser  
+                name={"profession"} 
+                value={form['profession']} 
+                onChange={onChange} 
+                required 
+                placeholder={'Profissão'}/>
+               
+                <TextUser 
+                type={'number'} 
+                onChange={onChange} 
+                name={"age"} 
+                value={form['age']}  
+                min={18} 
+                required 
+                placeholder={'Idade'}/>
+
+                <UserSelect 
+                onChange={onChange} 
+                name={"country"} 
+                value={form['country']} 
+                required>
                     <option>Escolha um país</option>
                     <option value="África do Sul">África do Sul</option>
                     <option value="Albânia">Albânia</option>
@@ -274,7 +302,7 @@ function ApplicationFormPage (props){
                     <option value="Zâmbia">Zâmbia</option>
                     <option value="Zimbábue">Zimbábue</option>
                 </UserSelect>
-                <FormButton onClick={applyToTrip}>Enviar candidatura</FormButton>
+                <FormButton type={'submit'} >Enviar candidatura</FormButton>
             </FormWrapper>
             
             <GoToBackButton onClick={goToBack}>Voltar</GoToBackButton>

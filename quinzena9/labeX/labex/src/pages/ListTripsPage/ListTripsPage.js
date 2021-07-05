@@ -2,7 +2,7 @@ import {ContainerListTripsPage, SubTituloListTripsPage, CardsTrips, TituloPage, 
 import React, {useEffect, useState} from 'react'
 import {useHistory} from 'react-router-dom'
 import axios from 'axios'
-
+import {BASE_URL} from '../../constants/urls'
 
 
 function ListTripsPage (){
@@ -19,12 +19,9 @@ function ListTripsPage (){
         history.push("/trips/application")
     }
     const showListTrip =() =>{
-            axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labeX/jessica-cabral-munoz/trips')
+            axios.get(`${BASE_URL}/trips`)
             .then((response)=>{
                 setTrips(response.data.trips)
-                
-                
-            
                 
             })
         }
@@ -32,8 +29,6 @@ function ListTripsPage (){
     useEffect(()=>{
         showListTrip()
     },[])
-    
-    
     
     const listaViagens = trips.map((trip)=>{
         return <CardsTrips key={trip.id}>
@@ -45,9 +40,6 @@ function ListTripsPage (){
         </CardsTrips> 
     })
 
-    
-    
-    
     return(
         <ContainerListTripsPage>
             <HeaderListTrips>

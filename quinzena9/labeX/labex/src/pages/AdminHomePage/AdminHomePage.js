@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { useHistory } from 'react-router'
 import axios from 'axios'
 import {TripWrapper} from './styled'
+import {BASE_URL} from '../../constants/urls'
 
 function AdminHomePage (){
     const[tripsAdm, setTripsAdm]= useState([])
@@ -16,7 +17,7 @@ function AdminHomePage (){
         history.goBack()
      }
     useEffect(()=>{
-        axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labeX/jessica-cabral-munoz/trips')
+        axios.get(`${BASE_URL}/trips`)
         .then((response)=>{
             setTripsAdm(response.data.trips)
         })
